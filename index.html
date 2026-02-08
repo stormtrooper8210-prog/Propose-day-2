@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nirgam ❤️</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(135deg,#ffb6c1,#dc143c);
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+section{
+  padding:60px 20px;
+}
+
+h1,h2{
+  font-family:'Playfair Display',serif;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero h1{
+  font-size:2.5rem;
+}
+
+.photo{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  margin:20px auto;
+  border:5px solid #ffd700;
+  overflow:hidden;
+  box-shadow:0 0 25px #ffd700;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.pickup{
+  background:linear-gradient(135deg,#ffb6c1,#ffd700);
+  color:white;
+}
+
+.line{
+  font-family:'Dancing Script',cursive;
+  font-size:1.6rem;
+  margin:20px 0;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+button{
+  padding:15px 35px;
+  font-size:18px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+}
+
+.yes{
+  background:#dc143c;
+  color:white;
+}
+
+.no{
+  background:#ffb6c1;
+}
+
+.message{
+  font-size:1.5rem;
+  margin-top:30px;
+  display:none;
+}
+
+.heart{
+  position:fixed;
+  bottom:-40px;
+  font-size:24px;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  to{
+    transform:translateY(-110vh);
+    opacity:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Happy Propose Day, Nirgam ❤️</h1>
+  <p>I’m Tabarak and Nirgam, I love you forever and ever and ever.</p>
+  <p><strong>I love you Nirgam 💖</strong></p>
+</section>
+
+<!-- PHOTO -->
+<section>
+  <div class="photo">
+    <!-- replace image link with her photo -->
+    <img src="Snapchat-138530367.jpg" alt="Nirgam">
+  </div>
+  <p>The reason behind my every smile 💕</p>
+</section>
+
+<!-- PICKUP LINES -->
+<section class="pickup">
+  <h2>Just for You</h2>
+  <div class="line">Every love story is beautiful, but ours is my favorite.</div>
+  <div class="line">My heart found its home the day it found you.</div>
+  <div class="line">If loving you is a dream, I never want to wake up.</div>
+  <div class="line">Forever doesn’t scare me, as long as it’s with you.</div>
+</section>
+
+<!-- PROPOSAL -->
+<section>
+  <h2>Will you be mine forever? 💍</h2>
+  <div class="buttons">
+    <button class="yes" id="yes">YES ❤️</button>
+    <button class="no" id="no">NO 🙈</button>
+  </div>
+  <div class="message" id="msg">
+    YAYYY!! 😍❤️ I knew it.  
+    <br>Tabarak & Nirgam — forever ♾️
+  </div>
+</section>
+
+<script>
+const yes=document.getElementById("yes");
+const no=document.getElementById("no");
+const msg=document.getElementById("msg");
+
+yes.onclick=()=>{
+  msg.style.display="block";
+};
+
+no.onmouseover=()=>{
+  no.style.position="fixed";
+  no.style.left=Math.random()*80+"vw";
+  no.style.top=Math.random()*80+"vh";
+};
+
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},700);
+</script>
+
+</body>
+</html>
